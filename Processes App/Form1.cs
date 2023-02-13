@@ -73,5 +73,10 @@ namespace Processes_App
         {
             killProcess.Kill();
         }
+
+        private void button_start_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

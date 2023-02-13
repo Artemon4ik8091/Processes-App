@@ -46,6 +46,8 @@
             this.label_count = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button_close = new System.Windows.Forms.Button();
+            this.textBox_start = new System.Windows.Forms.TextBox();
+            this.button_start = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -194,11 +196,30 @@
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
+            // textBox_start
+            // 
+            this.textBox_start.Location = new System.Drawing.Point(145, 4);
+            this.textBox_start.Name = "textBox_start";
+            this.textBox_start.Size = new System.Drawing.Size(371, 23);
+            this.textBox_start.TabIndex = 16;
+            // 
+            // button_start
+            // 
+            this.button_start.Location = new System.Drawing.Point(522, 4);
+            this.button_start.Name = "button_start";
+            this.button_start.Size = new System.Drawing.Size(116, 23);
+            this.button_start.TabIndex = 17;
+            this.button_start.Text = "Start new process";
+            this.button_start.UseVisualStyleBackColor = true;
+            this.button_start.Click += new System.EventHandler(this.button_start_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(722, 543);
+            this.Controls.Add(this.button_start);
+            this.Controls.Add(this.textBox_start);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.label_count);
             this.Controls.Add(this.label11);
@@ -242,5 +263,7 @@
         private Label label_count;
         private Label label11;
         private Button button_close;
+        private TextBox textBox_start;
+        private Button button_start;
     }
 }
