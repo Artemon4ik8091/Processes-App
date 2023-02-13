@@ -32,15 +32,15 @@ namespace Processes_App
                 int counter = 0;
                 foreach (object obj in listBox1.Items)
                 {
-                    if((string)obj == listBox1.Items[listBox1.SelectedIndex].ToString() && counter != listBox1.SelectedIndex)
+                    if((string)obj == listBox1.Items[listBox1.SelectedIndex].ToString())
                     {
+                        if(counter == listBox1.SelectedIndex)
+                        {
+                            break;
+                        }
                         orderNumber++;
                     }
-                    else
-                    {
-                        break;
-                    }
-                        counter++;
+                    counter++;
                 }
                 Process[] processesByName = Process.GetProcessesByName(listBox1.Items[listBox1.SelectedIndex].ToString());
                 if (processesByName.Length > 0)
@@ -52,10 +52,10 @@ namespace Processes_App
                     label_count.Text = processesByName[0].Threads.Count.ToString();
                     label_copy.Text = processesByName.Count().ToString();
                 }
-                foreach(Process process in processesByName)
-                {
-                MessageBox.Show(process.GetHashCode().ToString());
-                }
+                //foreach(Process process in processesByName)
+                //{
+                //    MessageBox.Show(process.GetHashCode().ToString());
+                //}
             }
         }
 
