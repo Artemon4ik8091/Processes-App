@@ -202,6 +202,7 @@
             this.textBox_start.Name = "textBox_start";
             this.textBox_start.Size = new System.Drawing.Size(371, 23);
             this.textBox_start.TabIndex = 16;
+            this.textBox_start.TextChanged += new System.EventHandler(this.textBox_start_TextChanged);
             // 
             // button_start
             // 

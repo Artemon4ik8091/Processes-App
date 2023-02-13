@@ -76,7 +76,21 @@ namespace Processes_App
 
         private void button_start_Click(object sender, EventArgs e)
         {
+            Process process = new Process();
+            process.StartInfo = new ProcessStartInfo(textBox_start.Text);
+            process.Start();
+        }
 
+        private void textBox_start_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_start.Text.Length > 0)
+            {
+                button_start.Enabled = true;
+            }
+            else
+            {
+                button_start.Enabled = false;
+            }
         }
     }
 }
