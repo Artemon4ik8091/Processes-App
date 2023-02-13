@@ -45,6 +45,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label_count = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.button_close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -183,11 +184,22 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "Processes Copy";
             // 
+            // button_close
+            // 
+            this.button_close.Location = new System.Drawing.Point(635, 508);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(75, 23);
+            this.button_close.TabIndex = 15;
+            this.button_close.Text = "End Task";
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(722, 543);
+            this.Controls.Add(this.button_close);
             this.Controls.Add(this.label_count);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label_time);
@@ -229,5 +241,6 @@
         private Label label9;
         private Label label_count;
         private Label label11;
+        private Button button_close;
     }
 }
