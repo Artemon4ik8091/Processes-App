@@ -31,7 +31,10 @@ namespace Processes_App
                 if (processesByName.Length > 0)
                 {
                     label_id.Text = processesByName[0].Id.ToString();
-                    label_time.Text = processesByName[0].StartTime.ToString("H:m:s:fff");
+                    label_start.Text = processesByName[0].StartTime.ToString("H:m:s:fff");
+                    label_time.Text = processesByName[0].TotalProcessorTime.ToString();
+                    label_count.Text = processesByName[0].Threads.Count.ToString();
+                    label_copy.Text = processesByName.Count().ToString();
                 }
             }
         }
